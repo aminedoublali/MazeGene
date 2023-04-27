@@ -20,32 +20,28 @@ public class PlMz {
 		case "w":
 				if(Mz[x][y + 1] != 1) {
 					y++;
-				}
-				if(Mz[x][y + 1] == 1) {//進めなかった場合
+				}else{//進めなかった場合
 					System.out.println("進むことができません");
 				}
 				break;
 		case "d":
 				if(Mz[x + 1][y] != 1) {
 					x++;
-				}
-				if(Mz[x + 1][y] == 1) {//進めなかった場合
+				}else{//進めなかった場合
 					System.out.println("進むことができません");
 				}
 				break;
 		case "s":
 				if(Mz[x][y - 1] != 1) {
 					y--;
-				}
-				if(Mz[x][y - 1] == 1) {//進めなかった場合
+				}else{//進めなかった場合
 					System.out.println("進むことができません");
 				}
 				break;
 		case "a":
 				if(Mz[x - 1][y] != 1) {
 					x --;
-				}
-				if(Mz[x - 1][y] == 1) {//進めなかった場合
+				}else{//進めなかった場合
 					System.out.println("進むことができません");
 				}
 				break;
