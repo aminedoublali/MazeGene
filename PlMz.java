@@ -66,4 +66,9 @@ public class PlMz {
 		}
 	}
 
+	int[] getNewPl(){
+		int[] newPL = {y,x} 
+		return newPL;
+	}
+
 }
