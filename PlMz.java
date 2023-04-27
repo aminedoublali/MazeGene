@@ -19,8 +19,8 @@ public class PlMz {
 
 
 		// 各種初期化
-		this.x = PL[0];//14
-		this.y = PL[1];//1
+		this.x = PL[0];// 14
+		this.y = PL[1];// 1
 		this.Mz = Mz;
 		this.goalX = goal[0];
 		this.goalY = goal[1];
@@ -30,47 +30,45 @@ public class PlMz {
 		// 矢印キーの受け取り
 
 		// 移動
-		// TODO: ゴールするまでのループ処理を作る
+		// ゴールまでのループ処理完成
 		// while ループ フラグでループ判断
 		while (x != goalX || y != goalY) {
-			System.out.println("Mz[y][x]" + "|" + Mz[y][x]);//
-
-			System.out.println("W"+ Mz[y-1][x]);//テスト用
-			System.out.println("a"+ Mz[y][x-1]);
-			System.out.println("s"+ Mz[y+1][x]);
-			System.out.println("d"+ Mz[y][x+1]);
 			
-			//地図の描画
+			// System.out.println("Mz[y][x]" + "|" + Mz[y][x]);//テスト用
+			
+			// System.out.println("W"+ Mz[y-1][x]);//テスト用
+			// System.out.println("a"+ Mz[y][x-1]);
+			// System.out.println("s"+ Mz[y+1][x]);
+			// System.out.println("d"+ Mz[y][x+1]);
+
+			// 地図の描画
 			for (String[] i : Mz) {
 				System.out.println(Arrays.toString(i));
 			}
 
-			//移動処理
+			// 移動処理
 			System.out.println("移動したい方向を入力");
 			System.out.println("w:↑ d:→ s:↓ a");// 移動の入力はw,a,s,dで行う
 			Scanner sc = new Scanner(System.in);
 
 			System.out.print("移動方向入力 ->");
 			String n = sc.nextLine();
-			
 
-			
-			
 
-			// 地図の描画
+			// System.out.println("PL" + x +"/"+ y +":"+ "goal" + goalX + "/" + goalY);//テスト表示用
+			// System.out.println("n" + n);
 			
+			String s = "\u001b[00;35m" + "S " + "\u001b[00m";
 
-			System.out.println("PL" + x +"/"+ y +":"+ "goal" + goalX + "/" + goalY);//テスト表示用
-			System.out.println("n" + n);
-			//加算処理のミス y軸は上に行くほど+ではなく- 
-			//TODO: n=="w"がエラー原因
-			//A, scannerで取得したものと文字列を直接==で確かめることはできない
-			//参考リンク https://teratail.com/questions/101761?sort=2
+			// 加算処理のミス y軸は上に行くほど+ではなく-
+
+			// A, scannerで取得したものと文字列を直接==で確かめることはできない
+			// 参考リンク https://teratail.com/questions/101761?sort=2
 			if (n.equals("w")) {
 				if (Mz[y - 1][x] != "[]") {
 					Mz[y][x] = "  ";
 					y--;
-					Mz[y][x] = "P ";
+					Mz[y][x] = s;
 				} else {// 進めなかった場合
 					System.out.println("進むことができません");
 				}
@@ -78,7 +76,7 @@ public class PlMz {
 				if (Mz[y][x + 1] != "[]") {
 					Mz[y][x] = "  ";
 					x++;
-					Mz[y][x] = "P ";
+					Mz[y][x] = s;
 				} else {// 進めなかった場合
 					System.out.println("進むことができません");
 				}
@@ -86,7 +84,7 @@ public class PlMz {
 				if (Mz[y + 1][x] != "[]") {
 					Mz[y][x] = "  ";
 					y++;
-					Mz[y][x] = "P ";
+					Mz[y][x] = s;
 				} else {// 進めなかった場合
 					System.out.println("進むことができません");
 				}
@@ -94,7 +92,7 @@ public class PlMz {
 				if (Mz[y][x - 1] != "[]") {
 					Mz[y][x] = "  ";
 					x--;
-					Mz[y][x] = "P ";
+					Mz[y][x] = s;
 
 				} else {// 進めなかった場合
 					System.out.println("進むことができません");

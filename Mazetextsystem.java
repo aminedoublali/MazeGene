@@ -31,10 +31,11 @@ public class Mazetextsystem extends MakeMz {
                 MakeMz MakeMz = new MakeMz();
                 String[][] MazeMap = MakeMz.getMaze();
                 
-                // 描画処理呼び出し
-                for (String[] i : MazeMap) {
-                    System.out.println(Arrays.toString(i));
-                }
+                // ↓ whileループ内で描画しているため省略
+                // // 描画処理呼び出し
+                // for (String[] i : MazeMap) {
+                //     System.out.println(Arrays.toString(i));
+                // }
                 System.out.println(start);
             } else {
                 System.out.print(finish);

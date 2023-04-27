@@ -20,10 +20,11 @@ public class Main extends Mazetextsystem {
 
         //
         //while文 →ゴールしない限り
-        //TODO: ！！重要！！ while文完了してしまっている。
         //
         PlMz PL = new PlMz();
         PL.ido();
+
+        //TODO: クリアした演出考える gameClear();
         game.gameClear();
 
     }
