@@ -1,13 +1,13 @@
 
-import java.util.Scanner;
+import java.util.*;
 
 public class PlMz {
 	// マップ完成
 	int x, y;
-	int[][] Mz;
+	String[][] Mz;
 
 	// コマの移動入力の受付
-	void ido(int x, int y, int[][] Mz) { // x, yは
+	void ido(int x, int y, String[][] Mz) { // x, yは
 		this.x = x;
 		this.y = y;
 		this.Mz = Mz;
@@ -24,38 +24,38 @@ public class PlMz {
 		// 移動
 		switch (n) {
 			case "w":
-				if (Mz[x][y + 1] != 1) {
-					Mz[x][y] = 0;
+				if (Mz[x][y + 1] != "[]") {
+					Mz[x][y] = "　";
 					y++;
 				}
-				if (Mz[x][y + 1] == 1) {// 進めなかった場合
+				else{// 進めなかった場合
 					System.out.println("進むことができません");
 				}
 				break;
 			case "d":
-				if (Mz[x + 1][y] != 1) {
-					Mz[x][y] = 0;
+				if (Mz[x + 1][y] != "[]") {
+					Mz[x][y] = "　";
 					x++;
 				}
-				if (Mz[x + 1][y] == 1) {// 進めなかった場合
+				else {// 進めなかった場合
 					System.out.println("進むことができません");
 				}
 				break;
 			case "s":
-				if (Mz[x][y - 1] != 1) {
-					Mz[x][y] = 0;
+				if (Mz[x][y - 1] != "[]") {
+					Mz[x][y] = "　";
 					y--;
 				}
-				if (Mz[x][y - 1] == 1) {// 進めなかった場合
+				else {// 進めなかった場合
 					System.out.println("進むことができません");
 				}
 				break;
 			case "a":
-				if (Mz[x - 1][y] != 1) {
-					Mz[x][y] = 0;
+				if (Mz[x - 1][y] != "[]") {
+					Mz[x][y] = "　";
 					x--;
 				}
-				if (Mz[x - 1][y] == 1) {// 進めなかった場合
+				else {// 進めなかった場合
 					System.out.println("進むことができません");
 				}
 				break;
@@ -71,6 +71,7 @@ public class PlMz {
 	void finish(int x, int y, int goalX, int goalY) {
 		if (x == goalX && y == goalY) {
 			System.out.println("ゴールしました");
+		
 		}
 	}
 
@@ -80,7 +81,7 @@ public class PlMz {
 		return newPL;
 	}
 
-	int[][] getNewMazeMap(){
+	String[][] getNewMazeMap(){
 		// NOTE: 書き換えたマップ(二次元配列)を返す
 		return Mz;
 	}

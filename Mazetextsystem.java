@@ -22,10 +22,17 @@ public class Mazetextsystem extends MakeMz {
             String gameover = "GAMEOVER";
 
             if (input_user.equals("y")) {
+<<<<<<< HEAD
+                
+                // やりました → 福田君頼んだ
+                int[][] MazeMap = mapdate.getMaze();
+                for (int[] i: MazeMap){
+=======
 
                 // 福田君頼んだ
                 String[][] MazeMap = mapdate.getMaze();
                 for (String[] i : MazeMap) {
+>>>>>>> d909009cfe8b2f3fbf0341369f21de4d9fbf4cce
                     System.out.println(Arrays.toString(i));
                 }
                 System.out.println(start);
