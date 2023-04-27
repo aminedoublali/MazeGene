@@ -10,6 +10,7 @@ public class PlMz {
 
 		// 矢印キーの受け取り
 		Scanner scanner = new Scanner(System.in);
+		System.out.print("移動方向入力 ->");
 		String n = scanner.nextLine();
 		System.out.println(n);
 
