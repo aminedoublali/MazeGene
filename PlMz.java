@@ -6,11 +6,12 @@ public class PlMz {
 	
 	//コマの移動入力の受付
 	void ido(int x, int y , int [][] Mz) { //x, yは
-		System.out.println("移動したい方向を入力");
+		System.out.println("移動したい方向を入力してください。操作方法は下記のとおりです");
 		System.out.println("w:↑ d:→ s:↓ a");//移動の入力はw,a,s,dで行う
 		
 		//矢印キーの受け取り
 		Scanner scanner = new Scanner(System.in);
+        System.out.print("移動方向入力 ->");
 		String n = scanner.nextLine();
 		System.out.println(n);
 		
