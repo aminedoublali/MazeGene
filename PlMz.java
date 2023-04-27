@@ -3,77 +3,117 @@ import java.util.*;
 
 public class PlMz {
 	// マップ完成
-	int x, y;
+	boolean flag; // ゲームクリア及びwhileループの処理の定義用
+	int x, y, goalX, goalY;
 	String[][] Mz;
 
 	// コマの移動入力の受付
-	void ido(int x, int y, String[][] Mz) { // x, yは
-		this.x = x;
-		this.y = y;
-		this.Mz = Mz;
+	/**
+	 * 
+	 */
+	void ido() { // void ido はここから
+		MakeMz make = new MakeMz();
+		int[] PL = make.getStart();// 書記スタート設定
+		int[] goal = make.getGoal(); // goal設定
+		String[][] Mz = make.getMaze();// 迷路地図設定
 
-		System.out.println("移動したい方向を入力");
-		System.out.println("w:↑ d:→ s:↓ a");// 移動の入力はw,a,s,dで行う
+
+		// 各種初期化
+		this.x = PL[0];//14
+		this.y = PL[1];//1
+		this.Mz = Mz;
+		this.goalX = goal[0];
+		this.goalY = goal[1];
+
+
 
 		// 矢印キーの受け取り
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("移動方向入力 ->");
-		String n = scanner.nextLine();
-		System.out.println(n);
 
 		// 移動
-		switch (n) {
-			case "w":
-				if (Mz[x][y + 1] != "[]") {
-					Mz[x][y] = "   ";
-					y++;
-				}
-				else{// 進めなかった場合
-					System.out.println("進むことができません");
-				}
-				break;
-			case "d":
-				if (Mz[x + 1][y] != "[]") {
-					Mz[x][y] = "   ";
-					x++;
-				}
-				else {// 進めなかった場合
-					System.out.println("進むことができません");
-				}
-				break;
-			case "s":
-				if (Mz[x][y - 1] != "[]") {
-					Mz[x][y] = "   ";
+		// TODO: ゴールするまでのループ処理を作る
+		// while ループ フラグでループ判断
+		while (x != goalX || y != goalY) {
+			System.out.println("Mz[y][x]" + "|" + Mz[y][x]);//
+
+			System.out.println("W"+ Mz[y-1][x]);//テスト用
+			System.out.println("a"+ Mz[y][x-1]);
+			System.out.println("s"+ Mz[y+1][x]);
+			System.out.println("d"+ Mz[y][x+1]);
+			
+			//地図の描画
+			for (String[] i : Mz) {
+				System.out.println(Arrays.toString(i));
+			}
+
+			//移動処理
+			System.out.println("移動したい方向を入力");
+			System.out.println("w:↑ d:→ s:↓ a");// 移動の入力はw,a,s,dで行う
+			Scanner sc = new Scanner(System.in);
+
+			System.out.print("移動方向入力 ->");
+			String n = sc.nextLine();
+			
+
+			
+			
+
+			// 地図の描画
+			
+
+			System.out.println("PL" + x +"/"+ y +":"+ "goal" + goalX + "/" + goalY);//テスト表示用
+			System.out.println("n" + n);
+			//加算処理のミス y軸は上に行くほど+ではなく- 
+			//TODO: n=="w"がエラー原因
+			//A, scannerで取得したものと文字列を直接==で確かめることはできない
+			//参考リンク https://teratail.com/questions/101761?sort=2
+			if (n.equals("w")) {
+				if (Mz[y - 1][x] != "[]") {
+					Mz[y][x] = "  ";
 					y--;
-				}
-				else {// 進めなかった場合
+					Mz[y][x] = "P ";
+				} else {// 進めなかった場合
 					System.out.println("進むことができません");
 				}
-				break;
-			case "a":
-				if (Mz[x - 1][y] != "[]") {
-					Mz[x][y] = "   ";
+			} else if (n.equals("d")) {
+				if (Mz[y][x + 1] != "[]") {
+					Mz[y][x] = "  ";
+					x++;
+					Mz[y][x] = "P ";
+				} else {// 進めなかった場合
+					System.out.println("進むことができません");
+				}
+			} else if (n.equals("s")) {
+				if (Mz[y + 1][x] != "[]") {
+					Mz[y][x] = "  ";
+					y++;
+					Mz[y][x] = "P ";
+				} else {// 進めなかった場合
+					System.out.println("進むことができません");
+				}
+			} else if (n.equals("a")) {
+				if (Mz[y][x - 1] != "[]") {
+					Mz[y][x] = "  ";
 					x--;
-				}
-				else {// 進めなかった場合
+					Mz[y][x] = "P ";
+
+				} else {// 進めなかった場合
 					System.out.println("進むことができません");
 				}
-				break;
-			// TODO:リスト外に出てしまう可能性あり、修正必要
-			default:
+
+			} else {
 				System.out.println("入力内容が間違っています");
-				break;
+
+			}
+
+		} // while ループ ここまで
+		// ここより下goal座標とPL座標が一致している
+		// 更新された現在地及び地図の描画
+		for (String[] i : Mz) {
+			System.out.println(Arrays.toString(i));
 		}
-		// 移動可能かどうかの判定
-		// startの一つ外側も移動不可にしておく
-	}
-	// ゴール座標と一致したかどうかの判定
-	void finish(int x, int y, int goalX, int goalY) {
-		if (x == goalX && y == goalY) {
-			System.out.println("ゴールしました");
-		
-		}
-	}
+	}// void ido はここまで
+
+
 
 	int[] getNewPl() {
 		// NOTE: PLの新しい座標を返す
@@ -81,7 +121,7 @@ public class PlMz {
 		return newPL;
 	}
 
-	String[][] getNewMazeMap(){
+	String[][] getNewMazeMap() {
 		// NOTE: 書き換えたマップ(二次元配列)を返す
 		return Mz;
 	}

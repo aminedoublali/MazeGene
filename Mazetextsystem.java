@@ -12,7 +12,7 @@ public class Mazetextsystem extends MakeMz {
 
         public String start;
         public String input_user = scanner.nextLine();
-        public String finish;
+        public String finish; //TODO:finishの中身
         public String gameover;
 
         public void Text(String start, String input_user, String finish, String gameover) {
@@ -26,11 +26,12 @@ public class Mazetextsystem extends MakeMz {
         }
 
         public void gametextsystem() {
-
             if (input_user.equals("y")) {
-
-                // やりました → 福田君頼んだ
-                String[][] MazeMap = mapdate.getMaze();
+                //迷路を制作する
+                MakeMz MakeMz = new MakeMz();
+                String[][] MazeMap = MakeMz.getMaze();
+                
+                // 描画処理呼び出し
                 for (String[] i : MazeMap) {
                     System.out.println(Arrays.toString(i));
                 }
@@ -38,6 +39,11 @@ public class Mazetextsystem extends MakeMz {
             } else {
                 System.out.print(finish);
             }
+        }
+
+        public void gameClear(){
+            System.out.println("hogehoge");//TODO: ゲームクリアおめでとう的なもの書く
+            //もう一度遊ぶかどうか尋ねるテキスト
         }
     }
 

@@ -23,8 +23,8 @@ public class MakeMz {
       { "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]" },
   };
 
-  int[] start = { 15, 0 };
-  int[] goal = { 1, 15 };
+  int[] start = { 1, 14 };
+  int[] goal = { 15, 1 };
 
   public String[][] getMaze() {
     return Maze;
