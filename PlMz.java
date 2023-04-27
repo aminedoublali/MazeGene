@@ -25,7 +25,7 @@ public class PlMz {
 		switch (n) {
 			case "w":
 				if (Mz[x][y + 1] != "[]") {
-					Mz[x][y] = "　";
+					Mz[x][y] = "   ";
 					y++;
 				}
 				else{// 進めなかった場合
@@ -34,7 +34,7 @@ public class PlMz {
 				break;
 			case "d":
 				if (Mz[x + 1][y] != "[]") {
-					Mz[x][y] = "　";
+					Mz[x][y] = "   ";
 					x++;
 				}
 				else {// 進めなかった場合
@@ -43,7 +43,7 @@ public class PlMz {
 				break;
 			case "s":
 				if (Mz[x][y - 1] != "[]") {
-					Mz[x][y] = "　";
+					Mz[x][y] = "   ";
 					y--;
 				}
 				else {// 進めなかった場合
@@ -52,7 +52,7 @@ public class PlMz {
 				break;
 			case "a":
 				if (Mz[x - 1][y] != "[]") {
-					Mz[x][y] = "　";
+					Mz[x][y] = "   ";
 					x--;
 				}
 				else {// 進めなかった場合
