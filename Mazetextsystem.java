@@ -10,16 +10,22 @@ public class Mazetextsystem extends MakeMz {
         Scanner scanner = new Scanner(System.in);
         MakeMz mapdate = new MakeMz();
 
-        public void gametextsystem() {
-            // ゲームスタート
-            String start = "それではゲームをスタートします";
+        public String start;
+        public String input_user = scanner.nextLine();
+        public String finish;
+        public String gameover;
 
+        public void Text(String start, String input_user, String finish, String gameover) {
+            // ゲームスタート
+            this.start = "それではゲームをスタートします";
             // ユーザー入力
-            String input_user = scanner.nextLine();
-            // ゲーム終了
-            String finish = "ゲームを終了します";
+            this.input_user = scanner.nextLine();
             // ゲームオーバー
-            String gameover = "GAMEOVER";
+            this.gameover = "GAMEOVER";
+
+        }
+
+        public void gametextsystem() {
 
             if (input_user.equals("y")) {
 
