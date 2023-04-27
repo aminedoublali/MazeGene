@@ -1,7 +1,12 @@
 import java.util.*;
 
 public class MakeMz{
-  ArrayList<String>[][] Maze = new ArrayList[16][16];
-  
+  int leng = 16;
+  ArrayList<String>[][] Maze = new ArrayList[leng][leng];
+  // 
+  for(int i = 0: i < leng; i++){
+    for (int g = 0; g < leng; g++){
 
+    }
+  }
 }
