@@ -9,7 +9,7 @@ public class Mazetextsystem extends MakeMz {
     static class Gametext {
         Scanner scanner = new Scanner(System.in);
         MakeMz mapdate = new MakeMz();
-    
+
         public void gametextsystem() {
             // ゲームスタート
             String start = "それではゲームをスタートします";
@@ -22,10 +22,10 @@ public class Mazetextsystem extends MakeMz {
             String gameover = "GAMEOVER";
 
             if (input_user.equals("y")) {
-                
+
                 // 福田君頼んだ
-                int[][] MazeMap = mapdate.getMaze();
-                for (int[] i: MazeMap){
+                String[][] MazeMap = mapdate.getMaze();
+                for (String[] i : MazeMap) {
                     System.out.println(Arrays.toString(i));
                 }
                 System.out.println(start);
