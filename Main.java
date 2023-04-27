@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 //Mazetextsystemを継承　一時的
 public class Main extends Mazetextsystem {
@@ -12,6 +12,5 @@ public class Main extends Mazetextsystem {
         // yと入力されたらゲームをはじめy以外はゲームを終了する。
         Gametext game = new Gametext();
         game.gametextsystem();
-
     }
 }
