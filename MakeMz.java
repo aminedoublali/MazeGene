@@ -33,14 +33,17 @@ public class MakeMz {
   int[] start = { 1, 14 };
   int[] goal = { 15, 1 };
 
+  //迷路のゲッター
   public String[][] getMaze() {
     return Maze;
   }
 
+  //スタート地点のゲッター
   public int[] getStart() {
     return start;
   }
 
+  //ゴール地点のゲッター
   public int[] getGoal() {
     return goal;
   }
