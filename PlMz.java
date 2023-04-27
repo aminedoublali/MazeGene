@@ -59,7 +59,7 @@ public class PlMz {
 	void finish(int x, int y, int goalX, int goalY) {
 		
 		if( x == goalX && y == goalY) {
-			System.out.println("ゴールしました");
+			System.out.println("ゴールしました!");
 		}
 	}
 
