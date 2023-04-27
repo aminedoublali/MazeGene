@@ -44,7 +44,7 @@ public class Mazetextsystem extends MakeMz {
 
         public void gameClear(){
             System.out.println("hogehoge");//TODO: ゲームクリアおめでとう的なもの書く
-            //もう一度遊ぶかどうか尋ねるテキスト
+            //もう一度遊ぶかどうか尋ねるテキスト (あれば)
         }
     }
 
