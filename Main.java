@@ -15,6 +15,7 @@ public class Main extends Mazetextsystem {
         //TODO:迷路の描画は個別にメソッド化する
         game.gametextsystem();
         //
+        //TODO:↓
         //while文 →ゴールしない限り
         //
         //プレイヤーコマの移動処理
