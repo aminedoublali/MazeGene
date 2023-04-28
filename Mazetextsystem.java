@@ -11,7 +11,6 @@ public class Mazetextsystem extends MakeMz {
   static class Gametext {
 
     Scanner scanner = new Scanner(System.in);
-    MakeMz mapdate = new MakeMz();
 
     public String start;
     public String input_user = scanner.nextLine();
