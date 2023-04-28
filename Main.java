@@ -22,10 +22,10 @@ public class Main extends Mazetextsystem {
         //
         // while文 →ゴールしない限りにすれば解決
         PlMz PL = new PlMz();
-        PL.ido();
+        int tekazu = PL.ido();
 
         // TODO: クリアした演出考える gameClear();
-        // game.gameClear();
+        game.gameClear(tekazu);
 
     }
 }
