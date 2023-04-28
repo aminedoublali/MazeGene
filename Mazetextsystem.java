@@ -25,6 +25,7 @@ public class Mazetextsystem extends MakeMz {
             this.input_user = scanner.nextLine();
             // ゲームオーバー
             this.gameover = "GAMEOVER";
+    }
 
 
       
