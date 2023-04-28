@@ -1,4 +1,4 @@
-
+//ふじさき
 import java.util.*;
 
 public class PlMz {
