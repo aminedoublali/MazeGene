@@ -289,5 +289,8 @@ public class MakeMz {
   public int[] getGoalthrd() {
     return goalthrd;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 15e56eb0c6e449f02a85727a4b13cbf8e5c4023b
 }
