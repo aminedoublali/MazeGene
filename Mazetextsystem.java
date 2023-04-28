@@ -44,4 +44,4 @@ public class Mazetextsystem extends MakeMz {
       // もう一度遊ぶかどうか尋ねるテキスト (あれば)
     }
   }
-}
+}}
