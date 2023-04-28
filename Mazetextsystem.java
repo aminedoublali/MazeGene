@@ -25,13 +25,8 @@ public class Mazetextsystem extends MakeMz {
             this.input_user = scanner.nextLine();
             // ゲームオーバー
             this.gameover = "GAMEOVER";
+    }
 
-          if (input_user.equals("y")) {
-          // 福田君頼んだ
-          int[][] MazeMap = mapdate.getMaze();
-          for (int[] i : MazeMap) {
-            System.out.println(Arrays.toString(i));
-        }
 
     public void gametextsystem() {
       if (input_user.equals("y")) {
