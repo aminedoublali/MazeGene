@@ -9,11 +9,10 @@ public class Main extends Mazetextsystem {
         // ゲーム開始までのユーザー操作
         System.out.println("迷路ゲーム");
         System.out.println("ゲームを始めますか？ y");
-        // 下難易度マップ呼び出し頼む！！！！↓
-        //ChooseMz ChooseMz = new ChooseMz();
+        
         
         // Gametextメソッドを呼び出し処理させています
-        // yと入力されたらゲームをはじめy以外はゲームを終了する。
+        // TODO:yと入力されたらゲームをはじめy以外はゲームを終了する。
         Gametext game = new Gametext();
         // textの表示と迷路の描画
         // TODO:迷路の描画は個別にメソッド化する ← 迷路の描画は煩雑でないため毎時コードを書く
