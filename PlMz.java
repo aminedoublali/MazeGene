@@ -33,10 +33,10 @@ public class PlMz {
 		// ゴールまでのループ処理完成
 		// while ループ フラグでループ判断
 		while (x != goalX || y != goalY) {
-			
-			// System.out.println("Mz[y][x]" + "|" + Mz[y][x]);//テスト用
-			
-			// System.out.println("W"+ Mz[y-1][x]);//テスト用
+
+			// System.out.println("Mz[y][x]" + "|" + Mz[y][x]); //数値確認用
+
+			// System.out.println("W"+ Mz[y-1][x]);//テスト用 消した
 			// System.out.println("a"+ Mz[y][x-1]);
 			// System.out.println("s"+ Mz[y+1][x]);
 			// System.out.println("d"+ Mz[y][x+1]);
@@ -50,6 +50,7 @@ public class PlMz {
 			System.out.println("移動したい方向を入力");
 			System.out.println("w:↑ d:→ s:↓ a");// 移動の入力はw,a,s,dで行う
 			Scanner sc = new Scanner(System.in);
+			// NOTE: Scannerが閉じていない。ループ処理を行うため意図的なもの
 
 			System.out.print("移動方向入力 ->");
 			String n = sc.nextLine();
@@ -57,13 +58,14 @@ public class PlMz {
 
 			// System.out.println("PL" + x +"/"+ y +":"+ "goal" + goalX + "/" + goalY);//テスト表示用
 			// System.out.println("n" + n);
-			
-			//CHANGED:Sを着色して扱うために変数化した
+
+			// CHANGED:Sを着色して扱うために変数化した
 			String s = "\u001b[00;35m" + "S " + "\u001b[00m";
 
 			// 加算処理のミス y軸は上に行くほど+ではなく-
 
-			// A, scannerで取得したものと文字列を直接==で確かめることはできない
+			//
+			// NOTE: scannerで取得したものと文字列を直接==で確かめることはできない。equalsの仕様は各々要確認
 			// 参考リンク https://teratail.com/questions/101761?sort=2
 			if (n.equals("w")) {
 				if (Mz[y - 1][x] != "[]") {
@@ -105,8 +107,11 @@ public class PlMz {
 			}
 
 		} // while ループ ここまで
+		// 長すぎて見づらいので関数化してもいいかも
+
+
 		// ここより下goal座標とPL座標が一致している
-		// 更新された現在地及び地図の描画
+		// ゴールに到着している地図の描画
 		for (String[] i : Mz) {
 			System.out.println(Arrays.toString(i));
 		}

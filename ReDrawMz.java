@@ -1,7 +1,9 @@
-import java.util.*;
+// import java.util.*;
 
-public class ReDrawMz{
-  public static void ReDrawMz() {
+// public class ReDrawMz{
+//   public static void ReDrawMz() {
     
-  }
-}
+//   }
+// }
+
+//使わないコード
