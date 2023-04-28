@@ -250,6 +250,14 @@ public class MakeMz {
     return Maze;
   }
 
+  public String[][] getMazesecond() {
+    return Mazesecond;
+  }
+
+  public String[][] getMazethrd() {
+    return Mazethrd;
+  }
+
   public int[] getStart() {
     return start;
   }
