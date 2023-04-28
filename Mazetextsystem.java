@@ -19,14 +19,13 @@ public class Mazetextsystem extends MakeMz {
     public String gameover;
 
     public void Text(String start, String input_user, String finish, String gameover) {
-            // ゲームスタート
-            this.start = "それではゲームをスタートします";
-            // ユーザー入力
-            this.input_user = scanner.nextLine();
-            // ゲームオーバー
-            this.gameover = "GAMEOVER";
+      // ゲームスタート
+      this.start = "それではゲームをスタートします";
+      // ユーザー入力
+      this.input_user = scanner.nextLine();
+      // ゲームオーバー
+      this.gameover = "GAMEOVER";
     }
-
 
     public void gametextsystem() {
       if (input_user.equals("y")) {
@@ -49,4 +48,4 @@ public class Mazetextsystem extends MakeMz {
       // もう一度遊ぶかどうか尋ねるテキスト (あれば)
     }
   }
-}}
+}
