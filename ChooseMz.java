@@ -2,12 +2,35 @@ import java.util.*;
 
 public class ChooseMz {
   public static int[][] ChooseMz() {
-    Scanner scanner = new Scanner(System.in);
+    int[][] maze;
     System.out.println("難易度を選んでください。");
     System.out.println("初級:1, 中級:2, 上級:3");
-    Integer level = scanner.nextInt();
+    Boolean flag = true;
     
+    while (flag == true){
+      Scanner scanner = new Scanner(System.in);
+      Integer level = scanner.nextInt();//ユーザに数値入力させて迷路選ばせる
+      
+      if (level == 1){//初級を選択した場合
+        maze = level1();//メソッドlevel1の迷路を呼び出す
+        flag = false;
+      
+      }else if(level == 2){//中級を選択した場合
+        maze = level2();//メソッドlevel2の迷路を呼び出す
+        flag = false;
+      
+      }else if(level == 3){//上級を選択した場合
+        maze = level3();//メソッドlevel3の迷路を呼び出す
+        flag = false;
 
+      }else{//それ以外の入力の場合
+        continue;
+        flag = true;
+      }
 
+    } 
+    return maze;   
   }
 }
+
+  
