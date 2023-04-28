@@ -10,8 +10,8 @@ public class Main extends Mazetextsystem {
         System.out.println("迷路ゲーム");
         System.out.println("ゲームを始めますか？ y");
         // 下難易度マップ呼び出し頼む！！！！↓
-        MakeMz MakeMz = new MakeMz();
-        MakeMz.ChooseMz();
+        //ChooseMz ChooseMz = new ChooseMz();
+        
         // Gametextメソッドを呼び出し処理させています
         // yと入力されたらゲームをはじめy以外はゲームを終了する。
         Gametext game = new Gametext();
@@ -28,7 +28,7 @@ public class Main extends Mazetextsystem {
         PL.ido();
 
         // TODO: クリアした演出考える gameClear();
-        game.gameClear();
+        //game.gameClear();
 
     }
 }

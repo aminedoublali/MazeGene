@@ -13,10 +13,11 @@ public class PlMz {
    *
    */
   int ido() { // void ido はここから
-    MakeMz make = new MakeMz();
-    int[] PL = make.getStart(); // 書記スタート設定
-    int[] goal = make.getGoal(); // goal設定
-    String[][] Mz = make.getMaze(); // 迷路地図設定
+    ChooseMz choose = new ChooseMz();
+    choose.choose();
+    int[] PL = choose.getStart(); // 書記スタート設定
+    int[] goal = choose.getGoal(); // goal設定
+    String[][] Mz = choose.getMaze(); // 迷路地図設定
 
     // 各種初期化
     this.x = PL[0]; // 14

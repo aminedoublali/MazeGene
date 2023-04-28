@@ -246,18 +246,16 @@ public class MakeMz {
   int[] start = { 1, 14 };
   int[] goal = { 15, 1 };
 
+  int[] startsecond = { 1, 27 };
+  int[] goalsecond = { 15, 0 };
+
+  int[] startthrd = { 1, 180 };
+  int[] goalthrd = { 14, 2 };
+
+
   public String[][] getMaze() {
     return Maze;
   }
-
-  public String[][] getMazesecond() {
-    return Mazesecond;
-  }
-
-  public String[][] getMazethrd() {
-    return Mazethrd;
-  }
-
   public int[] getStart() {
     return start;
   }
@@ -265,5 +263,30 @@ public class MakeMz {
   public int[] getGoal() {
     return goal;
   }
+
+  public String[][] getMazesecond() {
+    return Mazesecond;
+  }
+  public int[] getStartsecond() {
+    return startsecond;
+  }
+
+  public int[] getGoalsecond() {
+    return goalsecond;
+  }
+  
+
+  public String[][] getMazethrd() {
+    return Mazethrd;
+  }  
+  public int[] getStartthrd() {
+    return startthrd;
+  }
+
+  public int[] getGoalthrd() {
+    return goalthrd;
+  }
+
+
 
 }
