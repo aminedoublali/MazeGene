@@ -35,7 +35,7 @@ public class algorithm {
           maze[g][i] = "[]";
         }else{
           maze[g][i] = "  ";
-          roadlist.add
+          roadlist.add({g,i});
         }
       }
 
