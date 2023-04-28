@@ -26,12 +26,7 @@ public class Mazetextsystem extends MakeMz {
             // ゲームオーバー
             this.gameover = "GAMEOVER";
 
-      if (input_user.equals("y")) {
-        // 福田君頼んだ
-        // String[][] MazeMap = mapdate.getMaze();
-        // for (String[] i : MazeMap) {
-        //   System.out.println(Arrays.toString(i));
-        // }
+
       
 
     public void gametextsystem() {
@@ -55,7 +50,7 @@ public class Mazetextsystem extends MakeMz {
       System.out.println("_人人人_");
       System.out.println(">クリア<");
       System.out.println("-人人人-"); 
-      System.put.println("クリアおめでとう！　ここまでにかかった手数は、" + tekazu + "手です。");///TODO: ゲームクリアおめでとう的なもの書く
+      System.out.println("クリアおめでとう！　ここまでにかかった手数は、" + tekazu + "手です。");///TODO: ゲームクリアおめでとう的なもの書く
       //もう一度遊ぶかどうか尋ねるテキスト (あれば)
     }
   }
