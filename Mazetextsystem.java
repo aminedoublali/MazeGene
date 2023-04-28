@@ -35,11 +35,7 @@ public class Mazetextsystem extends MakeMz {
 
     public void gametextsystem() {
       if (input_user.equals("y")) {
-        // 迷路を制作する
-        MakeMz MakeMz = new MakeMz();
-        String[][] MazeMap = MakeMz.getMaze();
-
-        // ↓ whileループ内で描画しているため省略
+        // ↓ whileループ内で描画しているため
         // // 描画処理呼び出し
         // for (String[] i : MazeMap) {
         // System.out.println(Arrays.toString(i));
