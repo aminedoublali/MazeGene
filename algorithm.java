@@ -1,5 +1,5 @@
 import java.util.*;
-import javax.sql.rowset.spi.SyncResolver;
+import "C:\Java_PG\commons-collections4-4.4\commons-collections4-4.4.jar"
 
 // ！！！工事中
 
@@ -20,27 +20,40 @@ public class algorithm {
   //迷路生成アルゴリズム
   public String[][] GeneMaze(String[] size) {  
     //TODO: 幅高さ5以上の奇数であることを確認する
-    
+    Random rand = new Random(); 
+
+
     //roadlistで通路のリストを作る
-    ArrayList<Integer[]> roadlist =  new ArrayList<Integer[]>();
+    List<List<Integer>> roadlist = new ArrayList<>();
+    List<List<Integer>> walllist = new ArrayList<>();
+    List<Integer> r;
 
     int num = 21;//迷路の大きさ テスト用の仮置き
     maze = new String[num][num];
     
-    //迷路をすべて[]で埋める
+    
     for(int i = 0; i < num; i++ ){
       //外周を壁、それ以外を通路に
-      for (int g = 0: g < num; g++){
+      for (int g = 0; g < num; g++){
         if(i == 0 || g == 0 || i == num-1 || g == num-1){// i
           maze[g][i] = "[]";
+          r = new ArrayList<>(List.of(g,i));
+          walllist.add(r);
+          
         }else{
+          //通路をすべてリストに
           maze[g][i] = "  ";
-          roadlist.add({g,i});
+          
+          roadlist.add(r);
         }
       }
-
     }
-
+    
+    boolean flag = true
+    while(flag == true){
+      
+    }
+    rand.nextInt(4);
 
 
 
