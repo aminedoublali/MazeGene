@@ -58,6 +58,7 @@ public class PlMz {
 			// System.out.println("PL" + x +"/"+ y +":"+ "goal" + goalX + "/" + goalY);//テスト表示用
 			// System.out.println("n" + n);
 			
+			//CHANGED:Sを着色して扱うために変数化した
 			String s = "\u001b[00;35m" + "S " + "\u001b[00m";
 
 			// 加算処理のミス y軸は上に行くほど+ではなく-

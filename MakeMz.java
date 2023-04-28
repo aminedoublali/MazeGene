@@ -5,10 +5,19 @@ public class MakeMz {
   // public static void MakeMz() {}
   // int leng = 16;
 
+<<<<<<< HEAD
   // TODO:見づらいので着色する
   // 参考リンク https://qiita.com/DisneyAladdin/items/d20266326c7ae0782f33
   // 仮の例としてマップ初期設定時の
   String s = "\u001b[00;35m" + "S " + "\u001b[00m";
+=======
+  //TODO:見づらいので着色する
+  //参考リンク https://qiita.com/DisneyAladdin/items/d20266326c7ae0782f33
+  //仮の例としてマップ初期設定時の
+
+  //CHANGED: スタート地点を着色したかった。簡単のために変数にした
+  String s = "\u001b[00;35m" + "S " +  "\u001b[00m";
+>>>>>>> ceb9ba46f452ec049edebf8526c14818b1d22689
   String[][] Maze = {
       { "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]" },
       { "[]", "[]", "[]", "[]", "[]", "[]", "[]", "  ", "  ", "  ", "[]", "  ", "  ", "  ", "  ", "GO", },
@@ -62,14 +71,17 @@ public class MakeMz {
   int[] start = { 1, 14 };
   int[] goal = { 15, 1 };
 
+  //迷路のゲッター
   public String[][] getMaze() {
     return Maze;
   }
 
+  //スタート地点のゲッター
   public int[] getStart() {
     return start;
   }
 
+  //ゴール地点のゲッター
   public int[] getGoal() {
     return goal;
   }
