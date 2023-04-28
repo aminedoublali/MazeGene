@@ -9,8 +9,7 @@ public class Main extends Mazetextsystem {
         // ゲーム開始までのユーザー操作
         System.out.println("迷路ゲーム");
         System.out.println("ゲームを始めますか？ y");
-        
-        
+
         // Gametextメソッドを呼び出し処理させています
         // TODO:yと入力されたらゲームをはじめy以外はゲームを終了する。
         Gametext game = new Gametext();
@@ -18,16 +17,16 @@ public class Main extends Mazetextsystem {
         // TODO:迷路の描画は個別にメソッド化する ← 迷路の描画は煩雑でないため毎時コードを書く
         // ↑やっぱりメソッド化したほうが良いかも？
 
-        
         game.gametextsystem();
 
         //
         // while文 →ゴールしない限りにすれば解決
         PlMz PL = new PlMz();
-        PL.ido();
+        int tekazu;
+        tekazu = PL.ido();
 
         // TODO: クリアした演出考える gameClear();
-        //game.gameClear();
+        // game.gameClear();
 
     }
 }
