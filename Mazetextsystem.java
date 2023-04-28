@@ -28,10 +28,10 @@ public class Mazetextsystem extends MakeMz {
 
       if (input_user.equals("y")) {
         // 福田君頼んだ
-        String[][] MazeMap = mapdate.getMaze();
-        for (String[] i : MazeMap) {
-          System.out.println(Arrays.toString(i));
-        }
+        // String[][] MazeMap = mapdate.getMaze();
+        // for (String[] i : MazeMap) {
+        //   System.out.println(Arrays.toString(i));
+        // }
       
 
     public void gametextsystem() {
