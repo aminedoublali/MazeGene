@@ -19,7 +19,7 @@ public class Main extends Mazetextsystem {
         // TODO:迷路の描画は個別にメソッド化する ← 迷路の描画は煩雑でないため毎時コードを書く
         // ↑やっぱりメソッド化したほうが良いかも？
 
-        // 迷路の地図を描画するために地図を与える
+        
         game.gametextsystem();
 
         //
