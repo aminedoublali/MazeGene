@@ -30,11 +30,6 @@ public class Mazetextsystem extends MakeMz {
 
     public void gametextsystem() {
       if (input_user.equals("y")) {
-        // ↓ whileループ内で描画しているため
-        // // 描画処理呼び出し
-        // for (String[] i : MazeMap) {
-        // System.out.println(Arrays.toString(i));
-        // }
         System.out.println(start);
       } else {
         System.out.print(finish);
